@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imv_android_course"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/android_course"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/android_course"
+            android:onClick="onClick"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/btn_android_course"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:onClick="onClick"
+            app:layout_constraintTop_toBottomOf="@+id/imv_android_course"
+            android:backgroundTint="@color/my_light_primary"
+            android:text="@string/android_course"
+            />
+
+        <ImageView
+            android:id="@+id/imv_ios_course"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ios_course"
+            android:adjustViewBounds="true"
+            android:onClick="onClick"
+            android:contentDescription="@string/ios_course"
+            app:layout_constraintTop_toBottomOf="@id/btn_android_course"
+            app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/btn_ios_course"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:onClick="onClick"
+            app:layout_constraintTop_toBottomOf="@+id/imv_ios_course"
+            android:backgroundTint="@color/my_light_primary"
+            android:text="@string/ios_course"
+            />
+
+        <ImageView
+            android:id="@+id/imv_fullstack_course"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fullstack_course"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/full_stack_course"
+            android:onClick="onClick"
+            app:layout_constraintTop_toBottomOf="@id/btn_ios_course"
+            app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/btn_fullstack_course"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:onClick="onClick"
+            app:layout_constraintTop_toBottomOf="@+id/imv_fullstack_course"
+            android:backgroundTint="@color/my_light_primary"
+            android:text="@string/full_stack"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
